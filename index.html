@@ -134,5 +134,14 @@
 
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
 </body>
+  <script>
+function goFull() {
+  if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen().catch(()=>{});
+  }
+}
+document.body.addEventListener("touchstart", goFull);
+document.body.addEventListener("click", goFull);
+</script>
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
 </html>
